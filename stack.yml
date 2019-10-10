@@ -1,0 +1,8 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: S3 bucket for testing
+Resources:
+  TestS3Bucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Delete 
+    Properties:
+      BucketName: !Sub 'test-bucket-${AWS::StackName}-${AWS::Region}-${AWS::AccountId}' 
